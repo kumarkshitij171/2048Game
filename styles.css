@@ -159,6 +159,7 @@ footer{
     margin-top: 10px;
     padding-left: 45%;
     background: rgb(72 69 255);
+    z-index: 3;
 }
 
 footer a{
