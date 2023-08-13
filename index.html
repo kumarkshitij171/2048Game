@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="2048_logo.svg.png" type="image/x-icon">
+    <title>2048</title>
+</head>
+
+<body>
+    <h1>2048</h1>
+    <hr>
+    <div style="display: flex; justify-content: center;">
+    <h3>Score: <span id="MyScore">0</span></h3>
+    <h3>Best: <span id="BestScore">0</span></h3>
+</div>
+    <div id="board">
+        <!-- we populate this via javascript -->
+        <!--         
+            <div id="0-0:" class="tile x2">2</div>
+            <div id="0-1" class="tile x4">4</div>
+            <div id="0-2" class="tile x8">8</div>
+        -->
+        <h3 id="GameOver">Game End</h3>
+    </div>
+    <button id="NewGame" onclick="newG()">New Game</button>
+    <p id="Won">You Won🎉</p>
+    <div id="Rules">Rules: Use your arrow keys to move the tiles. <br> Tiles with the same number merge into one when they touch. <br> Add them up to reach 2048!</div>
+
+    <footer>Made by Kshitij 💝
+        <a href="https://github.com/kumarkshitij171/2048Game"><i class="fa-brands fa-github"></i></a>
+    </footer>
+
+    <!-- ***********script********* -->
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/d6e8b920f5.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
