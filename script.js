@@ -39,7 +39,7 @@ const startGame = () => {
 
     // remove previous child if any -> remove all tile
     let allTile = document.querySelectorAll('.tile')
-    allTile.forEach(tile => {
+    allTile.forEach((tile) => {
         tile.remove()
     })
 
@@ -56,7 +56,6 @@ const startGame = () => {
             document.getElementById('board').append(tile)
 
         }
-
     }
     // to start game have two 2's
     setTwo()
@@ -103,7 +102,6 @@ function setTwo() {
             found = true
         }
     }
-
 }
 
 const updateTile = (tile, val) => {
@@ -123,10 +121,11 @@ const updateTile = (tile, val) => {
 }
 
 
-document.addEventListener("keyup", (e) => {
+window.addEventListener("keydown", (e) => {
     if (canPresskey) {
         // console.log(e);
         if (e.code == "ArrowLeft") {
+            e.preventDefault()
             slideLeft();
             /* left key press
             original array: [2,2,2,0]
@@ -135,17 +134,20 @@ document.addEventListener("keyup", (e) => {
             again if after adding there are zeroes the clear it: [4,2]
             Now all task done get zeroes back: [4,2,0,0]
             */
-            setTwo()
+           setTwo()
         }
         else if (e.code == "ArrowRight") {
+            e.preventDefault()
             slideRight();
             setTwo()
         }
         else if (e.code == "ArrowUp") {
+            e.preventDefault()
             slideUp();
             setTwo()
         }
         else if (e.code == "ArrowDown") {
+            e.preventDefault()
             slideDown();
             setTwo()
         }
